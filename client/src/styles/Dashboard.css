@@ -1,0 +1,121 @@
+/* src/styles/Dashboard.css */
+
+.dashboard-container {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f6fa;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;         
+  box-sizing: border-box;
+}
+
+
+.dashboard-card h2 {
+  color: #2f3640;
+  margin-bottom: 20px;
+}
+
+.select-field,
+.checkbox-group {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-item input {
+  margin-right: 8px;
+}
+
+.button-primary {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #0077cc;
+}
+
+/* === Dark Mode === */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark .dashboard-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .checkbox-item {
+  background-color: #2c2c2c;
+}
+
+body.dark .button-primary {
+  background-color: #0984e3;
+  color: #fff;
+}
+.dashboard-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;                      /* Fill remaining space */
+  margin-left: 220px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+.dashboard-content.collapsed {
+  margin-left: 60px;
+}
+
+.pm-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pm-report-table th, .pm-report-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.pm-report-table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}

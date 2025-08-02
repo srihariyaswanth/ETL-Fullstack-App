@@ -1,0 +1,108 @@
+/* Sidebar base */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #004080;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s;
+  z-index: 1000;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Header with toggle button */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-title {
+  margin-left: 10px;
+  font-size: 1.3rem;
+}
+
+/* Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background-color: #0059b3;
+}
+
+/* Bottom Buttons */
+.sidebar-bottom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0984e3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar-btn.logout {
+  background-color: #d63031;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .sidebar {
+  background-color: #1e1e1e;
+}
+
+body.dark .sidebar-menu li.active {
+  background-color: #2c2c2c;
+}
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .sidebar-menu li,
+.sidebar.collapsed .sidebar-btn {
+  display: none;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.dashboard-content {
+  margin-left: 220px;
+  padding: 30px;
+  transition: margin-left 0.3s;
+}
+
+.dashboard-content.collapsed {
+  margin-left: 60px;
+}
